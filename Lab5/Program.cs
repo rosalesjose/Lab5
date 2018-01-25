@@ -15,11 +15,12 @@ namespace Lab5
             {                
                 int SidesOfDice = ReadUserInput("Please enter the number of sides for your pair of dice.");
                 Console.WriteLine("Number of sides: " + SidesOfDice);
-                Console.Clear();
+                
                 Console.WriteLine("Would you like to roll the dice?");
 
                 char RollDice = char.Parse(Console.ReadLine());
                 bool GenerateDice = true;
+
 
                 if (RollDice == 'y' || RollDice == 'Y')
                 {
@@ -32,6 +33,7 @@ namespace Lab5
 
                 while (GenerateDice)
                 {
+                    Console.Clear();
                     int Roll1 = GenerateRandom(SidesOfDice);
                     System.Threading.Thread.Sleep(20);
                     int Roll2 = GenerateRandom(SidesOfDice);
